@@ -2,6 +2,29 @@
 //maps a value from one range to another (linear interpolation)
 Math.map = function(x, in_min, in_max, out_min, out_max) { return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min; };
 
+/*
+function analyze(data)
+{
+	var compare = data.slice(0);
+	var output = new Array2D(data.length, data.length, 0);
+
+	for(var i = 0; i < data.length - 1; i++)
+	{
+		//rotate the array
+		var value = compare.pop();
+		compare.unshift(value);
+
+		for(var y = 0; y < data.length; y++)
+		{
+			output[y][i] = data[y] === compare[y] ? 1 : 0;
+		}
+	}
+
+	//normalize(output);
+	return output;
+}
+*/
+
 function analyze(data)
 {
 	var output = new Array2D(256, 256, 0);
@@ -18,9 +41,6 @@ function analyze(data)
 }
 
 
-/*
- * converts the data to a 0-255 scale, and then
- */
  /*
 function normalize(data)
 {

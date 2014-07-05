@@ -62,6 +62,7 @@ function drop(e)
 			dropzone.style.opacity = 0;
 			tools.style.opacity = 1;
 			
+			
 			var dataString = e.target.result;
 			finished_data = analyze(preprocess(dataString)); //the "big" calls
 			render();
