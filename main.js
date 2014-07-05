@@ -38,9 +38,9 @@ function render()
 
 		finished_data.forEach(function(v, x, y) {
 			ctx.globalAlpha = v;
-			var x = Math.map(x, 0, 255, 0, px - 1);
-			var y = Math.map(y, 0, 255, 0, px - 1);
-			var w = px / 256;
+			var x = Math.map(x, 0, finished_data.x - 1, 0, px - 1);
+			var y = Math.map(y, 0, finished_data.y - 1, 0, px - 1);
+			var w = px / finished_data.x;
 			ctx.fillRect(x, y, w, w);
 		});
 	}
