@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Binary Visualization</title>
+
+	<link rel='stylesheet' type='text/css' href='reset.css'>
+	<link rel='stylesheet' type='text/css' href='style.css'>
+
+	<script type="text/javascript" src="Array2D.js"></script>
+	<script type="text/javascript" src="analyze.js"></script>
+	<script type="text/javascript" src="main.js"></script> <!-- window.onload -->
+
+</head>
+<body>
+	<!-- Canvas -->
+	<div class="center-outer full-screen">
+		<div class="center-inner">
+			<canvas width="512" height="512">Please get a real browser</canvas>
+		</div>
+	</div>
+
+	<!-- File Dropper -->
+	<div id="drop-zone" class="center-outer full-screen">
+		<div class="center-inner">
+			<div class="drop-border">
+				Drop File Here
+			</div>
+		</div>
+	</div>
+
+	<span class="attr">Inspired by <a href="http://www.ted.com/talks/chris_domas_the_1s_and_0s_behind_cyber_warfare">Chris Domas</a></span>
+	<span class="tools">
+		<div class="file-info"></div>
+		<div>
+			<span>Dimensions</span>
+			<input type="number" name="quantity" min="256" max="2048" value="512">
+		</div>
+		<a id="download-image" class="button" href="http://google.com/">Download</a>
+	</span>
+</body>
+</html>
